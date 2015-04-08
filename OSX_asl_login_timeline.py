@@ -174,7 +174,7 @@ def __dowork__(work_input, work_output):
         f.close()
 
     # Open and write output
-    output = open(output_file_path, "w", encoding="utf-8")
+    output = open(output_file_path, "w")
     output.write("Timestamp\tEvent Type\tUser\tOther Details\n")
     for event in sorted(events, key=lambda x: x.timestamp):
         output.write(event.to_tsv_line())
